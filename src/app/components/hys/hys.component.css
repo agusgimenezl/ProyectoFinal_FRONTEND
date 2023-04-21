@@ -1,0 +1,9 @@
+div{
+    background-color: #a1b5cb;
+}
+div div{
+    padding: 3%;
+}
+.row{
+    padding: 20px;
+}

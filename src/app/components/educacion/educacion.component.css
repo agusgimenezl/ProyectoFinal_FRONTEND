@@ -8,3 +8,7 @@ div{
 h2,h3{
     display:inline; /* h1 y h3 ocupa lo que esta escrito y se junta en la misma línea*/
 }
+
+h1{
+    padding-bottom: 18px;
+}

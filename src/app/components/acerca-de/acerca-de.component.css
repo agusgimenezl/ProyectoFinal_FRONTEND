@@ -10,7 +10,6 @@ div{
 #nombre{
     font-size: 160%;
     font-weight: bold;
-    padding-top: 20%;
     display: flex; /* Establecer el contenedor como flex */
     align-items: center;
     justify-content: center; /* Centrar horizontalmente los elementos */
@@ -21,7 +20,9 @@ div{
 }
 
 #titulo{
-    padding-top: 7%;
+    padding-top: 5%;
+    font-style: oblique;
+    font-size: large;
 }
 
 
@@ -32,21 +33,28 @@ div{
         max-width: 90%; /* Establecer la anchura máxima al 100% del contenedor */
         height: auto; /* Establecer la altura a auto para mantener la proporción */
         margin-left: 7%;
-        border-radius: 50%;
+        border-radius: 49%;
         box-shadow: 1px 1px 1px black;
         
+    }
+    #nombre{
+        padding-top: 25%;
     }
 }
 @media(max-width:576px){
     #fotodeperfil{
-        position: absolute;
-        width: 30%;
+        display: block; /* Hacer que la imagen sea un elemento de bloque */
+        max-width: 40%; /* Establecer la anchura máxima al 100% del contenedor */
+        height: auto; /* Establecer la altura a auto para mantener la proporción */
+        margin-left: 33%;
+        margin-top: 8%;
         border-radius: 50%;
         box-shadow: 1px 1px 1px black;
-        left: 30%;
-        top: 630px;
+    }
+    #nombre{
+        padding-top: 8%;
     }
 }
 #acercaDeMi{
-    margin-top: 5%;
+    margin-top: 10%;
 }
