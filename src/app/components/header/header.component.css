@@ -1,0 +1,8 @@
+div{
+    background-color: #a1b5cb;
+}
+app-social{
+    float: right; /* para que este alineado a la derecha*/
+    margin-top:25px ;
+    margin-right:  20px;
+}
