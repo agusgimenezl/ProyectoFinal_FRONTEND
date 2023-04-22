@@ -1,3 +1,37 @@
-#logoAP{
-    width: 150px;  
+
+.container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+img{
+    padding: 1%;
+}
+
+
+@media(min-width:576px){
+    img{width: 3em;   
+    }
+    #logoAP{
+        width: 200px;  
+    }
+}
+
+@media(max-width:576px){
+    img{width: 2em;   
+    }
+    #logoAP{
+        width: 120px;  
+    }
+    .btn{
+        height: 2%;
+    }
+}
+.redes{
+    margin-right: 2%;
+}
+
+#github{
+    margin-right: 15px;
 }
