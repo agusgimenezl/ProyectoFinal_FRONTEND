@@ -2,13 +2,38 @@
     padding: 20px;
 }
 div{
-    background-color: #a1b5cb;
+    background-color: #9BBCD3;
 }
 
-h2,h3{
-    display:inline; /* h1 y h3 ocupa lo que esta escrito y se junta en la misma línea*/
+
+h3{
+    margin-top:30px ;
 }
+
 
 h1{
     padding-bottom: 18px;
+    margin-top: 3%;
 }
+
+h5{
+    padding-top:  1px;
+}
+.container{
+    width: auto;
+    display: inline-block;
+    
+    }
+    
+    .parteA, .parteB{
+        display: inline-block;
+        
+    }
+
+    
+    .img-proyecto{
+        box-shadow: 1px 1px 10px black;
+        width: 180px;
+        vertical-align:text-bottom;
+
+    }

@@ -2,7 +2,7 @@
     padding: 20px
 }
 div{
-    background-color: #a1b5cb;
+    background-color: #9BBCD3;
     text-align: center;
 }
 
@@ -33,6 +33,7 @@ div{
         max-width: 90%; /* Establecer la anchura máxima al 100% del contenedor */
         height: auto; /* Establecer la altura a auto para mantener la proporción */
         margin-left: 7%;
+        margin-top: 10%;
         border-radius: 49%;
         box-shadow: 1px 1px 1px black;
         
@@ -47,7 +48,7 @@ div{
         max-width: 40%; /* Establecer la anchura máxima al 100% del contenedor */
         height: auto; /* Establecer la altura a auto para mantener la proporción */
         margin-left: 33%;
-        margin-top: 8%;
+        margin-top: 7%;
         border-radius: 50%;
         box-shadow: 1px 1px 1px black;
     }
