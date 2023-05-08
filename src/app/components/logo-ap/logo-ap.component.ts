@@ -27,7 +27,7 @@ export class LogoAPComponent implements OnInit {
   }
 
 
-  login(){
+  login(){ //funcion q se lleva a cabo cuando hacemos click en "Ingresar"
     this.router.navigate(['/login'])
   }
 

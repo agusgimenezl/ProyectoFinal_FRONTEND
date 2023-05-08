@@ -1,50 +1,26 @@
 <div class="row">
   <h1>Experiencia laboral</h1>
-   <div class="container"> 
-     <div class="col-sm-6 col-md-6 col-lg-6 parteA">
-          <ul>
-            <li>
-                <h3>Emprendedora- Utopica Tucumán</h3> 
-                <h5>Ago 2020 - Feb 2023</h5>
-            </li>
-            <p> Una experiencia enriquecedora a nivel personal, donde desarroll aptitudes
-                como atención al cliente, plan y seguimiento de compra y stock,
-                planillas de venta, logística y manejo de redes sociales.
-                
-            </p>
-         </ul>
-      </div>
-       <div class="col-sm-5 col-md-5 col-lg-5 parteA offset-1 offset-sm-1
-          offset-md-1 offset-lg-1 parteB">
-           <img src="../../../assets/utopica.jpg" 
-            class="img-fluid
-            img-proyecto">
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+      Nueva experiencia
 
-        </div>
-    </div>
-    
-    <div class="container"> 
-          <div class="col-sm-6 col-md-6 col-lg-6 parteA">
-            <ul>
-                <li>
-                    <h3>Secretaria principal en "Ocean Grill"</h3> 
-                    <h5>Dic 2021 - Mar 2022</h5>
-                </li>
-                <p>Ubicado en el prestigioso hotel "The Setai" en Miami Beach.
-                    Desarrollé aptitudes relacionadas a la resolución de problemas,
-                    fuerte toma de decisiones, trabajo en equipo, optimización de procesos y sobre todo,
-                    mejoré mi fluidez con el idioma inglés.
-                </p>
-            </ul>
-         </div>
-          <div class="col-sm-5 col-md-5 col-lg-5 parteA offset-1
-          offset-sm-1 offset-md-1 offset-lg-1 parteB">
-              <img src="../../../assets/the setai.jpg" 
-               class="img-fluid
-               img-proyecto">
-   
-           </div>
-    </div>
+    </button>
+  </div>
+<div class="col lg 1"></div>
+  <div class="col-lg-11">
+   <table class="table">
+    <tbody> 
+        <tr *ngFor="let Experiencia of expe">
+            <td> {{Experiencia.nombreE}} </td>
+            <td>{{Experiencia.descripcionE}}</td>
+            <td>EDITAR</td>
+            <td>BORRAR</td>
+        </tr>
+    </tbody>
+
+   </table>
+</div>
+
 
 
 
