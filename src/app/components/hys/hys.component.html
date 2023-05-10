@@ -1,156 +1,38 @@
 <div class="row">
-    <h1>Hard & Soft Skills</h1>
-    <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'JavaScript'"
-        [titleColor]="'black'"
-        [percent]="50"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#1E8449'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
+  <h1>Hard & Soft Skills</h1>
+
+  <div class="col-lg-2">
+    <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+  </div>
+
+
+  <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3 circulo" *ngFor="let skill of skill">
+    <circle-progress 
+    [title]="(skill.nombre)" 
+    [titleColor]="'black'" 
+    [showTitle]="true" 
+    [percent]="(skill.porcentaje)"
+    [showUnits]="false" 
+    [showSubtitle]="false" 
+    [radius]="100" 
+    [responsive]="true" 
+    [outerStrokeWidth]="10"
+    [innerStrokeWidth]="8" 
+    [outerStrokeColor]="'#1E8449'" 
+    [innerStrokeColor]="'#C7E596'" 
+    [animation]="true"
+    [animationDuration]="650" 
+    [lazy]="true">
+    </circle-progress>
+
+    <div>
+      <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i
+            class="bi bi-pencil-fill"></i></button></td>
+      <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(skill.id)"><i
+            class="bi bi-trash"></i></button></td>
     </div>
 
-    <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'HTML5'"
-        [titleColor]="'black'"
-        [percent]="90"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#1E8449'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
 
-    <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'SQL'"
-        [titleColor]="'black'"
-        [percent]="78"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#1E8449'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
+  </div>
 
-    <div class="text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'Angular'"
-        [titleColor]="'black'"
-        [percent]="90"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#1E8449'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
-
-    <div class="text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'Trabajo en equipo'"
-        [titleColor]="'black'"
-        [percent]="80"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#E57042'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
-
-    <div class="text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'Gestión de tiempo'"
-        [titleColor]="'black'"
-        [percent]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#E57042'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
-
-    <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'Creatividad'"
-        [titleColor]="'black'"
-        [percent]="90"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#E57042'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
-
-    <div class="text center col-6 col-sm-4 col-md-3 col-lg-3">
-        <circle-progress
-        [title]="'Comunicación'"
-        [titleColor]="'black'"
-        [percent]="85"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [radius]="100"
-        [responsive]="true"
-        [outerStrokeWidth]="10"  
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#E57042'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="650"
-        [lazy]="true"
-      ></circle-progress>
-    </div>
-
-    
 </div>

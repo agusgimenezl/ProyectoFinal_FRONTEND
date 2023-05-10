@@ -19,6 +19,12 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { EditSkillComponent } from './components/hys/edit-skill.component';
+import { NewSkillComponent } from './components/hys/new-skill.component';
+import { EnviromentTsnComponent } from './components/hys/enviroments/enviroment.tsn/enviroment.tsn.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    NewExperienciaComponent
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    EnviromentTsnComponent
   ],
   imports: [
     BrowserModule,

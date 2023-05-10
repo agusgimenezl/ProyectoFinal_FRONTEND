@@ -29,6 +29,7 @@ constructor(private sExperiencia:SExperienciaService, private router: Router){
     }, err=>{
       alert("Falló");
       this.router.navigate(['']);
-    })
+    }
+    )
   }
 }
