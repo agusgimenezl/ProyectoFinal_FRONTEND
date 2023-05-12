@@ -1,38 +1,29 @@
-<div class="row">
+<div>
   <h1>Hard & Soft Skills</h1>
-
   <div class="col-lg-2">
     <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
   </div>
 
+  <div class="row">
 
-  <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3 circulo" *ngFor="let skill of skill">
-    <circle-progress 
-    [title]="(skill.nombre)" 
-    [titleColor]="'black'" 
-    [showTitle]="true" 
-    [percent]="(skill.porcentaje)"
-    [showUnits]="false" 
-    [showSubtitle]="false" 
-    [radius]="100" 
-    [responsive]="true" 
-    [outerStrokeWidth]="10"
-    [innerStrokeWidth]="8" 
-    [outerStrokeColor]="'#1E8449'" 
-    [innerStrokeColor]="'#C7E596'" 
-    [animation]="true"
-    [animationDuration]="650" 
-    [lazy]="true">
-    </circle-progress>
+    <br>
 
-    <div>
-      <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i
-            class="bi bi-pencil-fill"></i></button></td>
-      <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(skill.id)"><i
-            class="bi bi-trash"></i></button></td>
+    <div class=" text center col-6 col-sm-4 col-md-3 col-lg-3 circulo" *ngFor="let skill of skill">
+      <circle-progress [title]="(skill.nombre)" [titleColor]="'black'" [showTitle]="true" [percent]="(skill.porcentaje)"
+        [showUnits]="false" [showSubtitle]="false" [radius]="100" [responsive]="true" [outerStrokeWidth]="10"
+        [innerStrokeWidth]="8" [outerStrokeColor]="'#1E8449'" [innerStrokeColor]="'#FFFFFF'" [animation]="true"
+        [animationDuration]="650" [lazy]="true">
+      </circle-progress>
+
+      <div class="small button">
+        <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i
+              class="bi bi-pencil-fill"></i></button></td>
+        <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(skill.id)"><i
+              class="bi bi-trash"></i></button></td>
+      </div>
+
+
     </div>
 
-
   </div>
-
 </div>

@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Educacion } from '../Model/educacion';
-import { enviroment } from 'src/enviroments/enviroment';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-URL= enviroment.URL + 'educacion/';
+//URL= environment.URL + 'educacion/';
+URL='http://localhost:8080/educacion/';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -32,4 +34,3 @@ URL= enviroment.URL + 'educacion/';
     return this.httpClient.delete<any>(this.URL+`delete/${id}`);
   }
 }
-//

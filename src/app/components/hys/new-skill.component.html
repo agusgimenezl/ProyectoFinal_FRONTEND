@@ -1,19 +1,22 @@
 <div class="container">
+    <br>
     <div class="row">
-        <div>
+        <div class="centrar-form">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombre">Nombre de la aptitud</label>
+                    <label for="nombre"> <b>Nombre de la aptitud</b> </label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
                 </div>
+                <br>
 
                 <div class="form-group">
-                    <label for="porcentaje">Porcentaje</label>
+                    <label for="porcentaje"><b>Porcentaje</b></label>
                     <input type="text" class="form-control" id="porcentaje" name="porcentaje"
                         [(ngModel)]="porcentaje" required>
                 </div>
+                <br>
                 <button class="btn btn-secondary">
-                    Agregar aptitud
+                    <b>Agregar aptitud</b> 
                 </button>
 
             </form>

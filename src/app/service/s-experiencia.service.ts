@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../Model/experiencia';
-import { enviroment } from 'src/enviroments/enviroment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL= enviroment.URL + 'explab/';
+  //URL= environment.URL + 'explab/';
+  URL='http://localhost:8080/explab/';
+
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Experiencia[]>{ //en teoria falta un corchete para hacerlo tipo lista

@@ -1,22 +1,18 @@
- <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3"> 
-        <img src="../../../assets/fotoPerfil.jpg"
-         class="img-fluid"
-         id="fotodeperfil">
+<div class="row">
+    <button type="button" class="btn btn-light" routerLink="/editacercade/1" *ngIf="isLogged">
+       <b>Editar persona</b> 
+    </button>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <img src={{persona.img}} class="img-fluid" id="fotodeperfil">
     </div>
     <div class="col-xs-12 col-sm-8 col-md-3 col-lg-3">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
         <p id="titulo">Full Stack Developer Jr.</p>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-     <span>
-        <h1 id="acercaDeMi">Acerca de mí</h1>
-        <p> Tengo 23 años y actualmente soy estudiante de Ingeniería Industrial en la UNT (Tucumán). 
-            Soy una persona muy curiosa, autodidacta y responsable. <br>
-            Un día descubrí este
-            mundo de la programación y no pude salir. Lo disfruto mucho y aspiro a lograr grandes cosas con ello.
-
-        </p>
-     </span>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 descripcion">
+        <span>
+            <h1 id="acercaDeMi">Acerca de mí</h1>
+            <p> {{persona.descripcion}} </p>
+        </span>
     </div>
- </div>
+</div>

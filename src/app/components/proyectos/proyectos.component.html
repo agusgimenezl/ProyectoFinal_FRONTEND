@@ -1,19 +1,33 @@
-<div class="row">
-    <h1>Proyectos realizados</h1>
-    <div>
-        <div class="col-sm-12 col-md-7 col-lg-6 parte1">
-            <h3 id="subtitulo">Portfolio Web </h3>
-            <p> Se trata de mi primer Portfolio como programadora FullStack Jr. <br>
-                Gracias por llegar hasta aquí!
-            </p>
+
+<div >
+    <div class="row">
+        <h1>Proyectos realizados</h1>
+        <br>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nuevoproyecto" *ngIf="isLogged">
+                Nuevo Proyecto
+            </button>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-6 parte1
-        offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/arg programa.png" 
-            class="img-fluid
-            img-proyecto">
+        <br>
+        <div *ngFor="let Proyectos of proyectos" id="bloque">
+
+            <div class="linea">
+                <h4>{{Proyectos.nombre}}</h4>
+                <button *ngIf="isLogged" class="btn btn-light" routerLink="/editproyecto/{{Proyectos.id}}"><i class="bi bi-pencil-fill"
+                        width="50px" ></i></button>
+                <button *ngIf="isLogged" class="btn btn-danger" (click)="borrar(Proyectos.id)"><i class="bi bi-trash"
+                        width="50px"></i></button>
+            </div>
+
+            <div> 
+                <p>{{Proyectos.descripcion}}</p>
+                <br>
+                <img [src]="imageService.url" class="img-fluid" id="fotodeproyecto" >
+            
+                <br>
+                <a href="{{Proyectos.link}}"><button id="link" class="btn btn-light"> <b>Link del proyecto</b> </button></a>
+            </div>
 
         </div>
     </div>
 
-</div>

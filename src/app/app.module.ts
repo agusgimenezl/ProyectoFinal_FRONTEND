@@ -25,6 +25,12 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EnviromentTsnComponent } from './components/hys/enviroments/enviroment.tsn/enviroment.tsn.component';
+import { EditacercadeComponent } from './components/acerca-de/editacercade.component';
+import { NewproyectoComponent } from './components/proyectos/newproyecto.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditproyectoComponent } from './components/proyectos/editproyecto.component';
 
 @NgModule({
   declarations: [
@@ -46,14 +52,19 @@ import { EnviromentTsnComponent } from './components/hys/enviroments/enviroment.
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EnviromentTsnComponent
+    EnviromentTsnComponent,
+    EditacercadeComponent,
+    NewproyectoComponent,
+    EditproyectoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
