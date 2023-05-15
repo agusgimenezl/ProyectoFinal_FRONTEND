@@ -1,4 +1,4 @@
-form {
+.row {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
@@ -14,7 +14,7 @@ form {
     margin: 0.5rem;
   }
   
-  form button {
+  button {
     padding: 0.5em 1em;
     border: none;
     cursor: pointer;

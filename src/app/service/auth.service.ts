@@ -14,6 +14,7 @@ export class AuthService {
  // URL= environment.URL + 'auth/';
  URL='http://localhost:8080/auth/';
 
+
   constructor(private httpClient: HttpClient) { }
 
 public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

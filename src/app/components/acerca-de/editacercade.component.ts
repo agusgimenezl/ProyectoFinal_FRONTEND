@@ -21,10 +21,11 @@ ngOnInit(): void {
       data=>{
         this.persona=data;
       }, err =>{
-        alert("Error al modificar la educación");
+        alert("Error al modificar");
         this.router.navigate(['']);
       }
     )
+    this.imageService.clearUrl();
 }
 
 onUpdate():void{
@@ -38,14 +39,16 @@ onUpdate():void{
         this.router.navigate(['']);
       }
     )
+    this.imageService.clearUrl();
 }
 
 
-uploadImage($event:any){
-  const id=this.activatedRouter.snapshot.params['id'] //unicidad de archivos
-  const name= "perfil_" + id
-  this.imageService.uploadImage($event, name)
+uploadImage($event:any){ //el evento es la carga de la foto
+  const id=this.activatedRouter.snapshot.params['id']; //unicidad de archivos
+  const name= "perfil_" + id;
+  this.imageService.uploadImage($event, name);
 }
+
 
 
 }

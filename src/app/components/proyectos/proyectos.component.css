@@ -27,16 +27,21 @@ h1{
     /* Establecer la anchura máxima al 100% del contenedor */
     height: auto;
     /* Establecer la altura a auto para mantener la proporción */
-    margin-top: 2%;
     box-shadow: 1px 1px 1px black;
 
 }
 
 .linea button{
     margin-left: 1em;
+    justify-content: end;
+
 }
 
 h4{
     padding-top: 2%;
+}
+
+#bloque{
+padding-top: 2% ;
 }
 

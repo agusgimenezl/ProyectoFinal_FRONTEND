@@ -21,7 +21,7 @@ export class ImageService {
   }
 
   getImages() {
-    const imagesRef = ref(this.storage, 'imagen/') 
+    const imagesRef = ref(this.storage, 'imagen' ) 
     list(imagesRef).then(async response => { //lo pongo asincrono ya que tarda, sino lo devolverá vacío
       for (let item of response.items) {
         this.url = await getDownloadURL(item); //await por la asincronicidad
@@ -29,6 +29,11 @@ export class ImageService {
     })
     .catch(error => console.log(error))
   }
+
+  clearUrl() {
+    this.url = "";
+  }
+ 
 }
 
 
