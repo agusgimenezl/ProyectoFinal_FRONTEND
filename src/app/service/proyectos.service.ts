@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ProyectosService {
 //URL= environment.URL + 'proyectos/';
-URL='http://localhost:8080/proyectos/';
+URL='https://miportfolio-lzxa.onrender.com/proyectos/';
  
 constructor(private httpClient: HttpClient) { }
 

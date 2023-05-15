@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PersonaService {
   //URL= environment.URL + 'personas/';
-  URL='http://localhost:8080/personas/';
+  URL='https://miportfolio-lzxa.onrender.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 

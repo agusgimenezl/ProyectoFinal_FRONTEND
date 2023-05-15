@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
  // URL= environment.URL + 'auth/';
- URL='http://localhost:8080/auth/';
+ URL='https://miportfolio-lzxa.onrender.com/auth/';
 
 
   constructor(private httpClient: HttpClient) { }

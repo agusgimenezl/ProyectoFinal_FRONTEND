@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionService {
 //URL= environment.URL + 'educacion/';
-URL='http://localhost:8080/educacion/';
+URL='https://miportfolio-lzxa.onrender.com/educacion/';
 
   constructor(private httpClient: HttpClient) {}
 

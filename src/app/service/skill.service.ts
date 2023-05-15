@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SkillService {
 //URL= environment.URL + 'skill/';
-URL='http://localhost:8080/skill/';
+URL='https://miportfolio-lzxa.onrender.com/skill/';
 
 
   constructor(private httpClient: HttpClient) { }
