@@ -4,7 +4,7 @@
 }
 
 h1{
-    padding-bottom: 18px;
+    padding-bottom: 8px;
 }
 
 
@@ -37,11 +37,10 @@ h1{
 
 }
 
-h4{
-    padding-top: 2%;
-}
-
 #bloque{
-padding-top: 2% ;
+padding-top: 3% ;
 }
 
+#link{
+    margin-bottom: 3%;
+}

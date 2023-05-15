@@ -37,11 +37,12 @@ export class NewproyectoComponent implements OnInit {
       this.router.navigate(['']);
     }
     )
+    this.imageService.clearUrl();
   }
 
   uploadImage($event: any) { 
     const name = this.nombre; //crea el name (nombre del archivo de proyecto)
-    const file = $event.target.files[0]; //crea cte file con el archivo?
+    const file = $event.target.files[0]; //crea cte file con el archivo
     const imgRef = ref(this.storage, `newproyectos/` + name);
     uploadBytes(imgRef, file)
       .then(response => (this.getImages(name))) //ya que contiene promesas de devolución, necesario??
@@ -53,6 +54,7 @@ export class NewproyectoComponent implements OnInit {
     list(imagesRef).then(async response => { //lo pongo asincrono ya que tarda, sino lo devolverá vacío
       for (let item of response.items) {
         this.url = await getDownloadURL(item); //await por la asincronicidad
+        console.log(item)
         if (name == item.name) {
           this.proyectos.img = this.url
         }

@@ -26,8 +26,9 @@ export class ProyectosComponent {
   }
 
   cargarProyectos(): void {
-    this.proyectosS.lista().subscribe(data => ( this.proyectos = data)
-        )
+    this.proyectosS.lista().subscribe(data => {this.proyectos = data; console.log(data)} )
+       
+        
   }
 
   borrar(id ?: number){

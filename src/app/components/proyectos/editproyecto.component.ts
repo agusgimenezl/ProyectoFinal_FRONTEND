@@ -59,15 +59,14 @@ export class EditproyectoComponent implements OnInit {
       .catch(error => console.log(error)) //muestra el error por consola si lo hubiese
   }
 
-  getImages(name:String) {
+  getImages(name: String) {
     const imagesRef = ref(this.storage, 'editproyectos')
     list(imagesRef).then(async response => { //lo pongo asincrono ya que tarda, sino lo devolverá vacío
       for (let item of response.items) {
         this.url = await getDownloadURL(item); //await por la asincronicidad
-       if(name==item.name){
-        this.proyectos.img=this.url
-       }
-       
+        if (name == item.name) {
+          this.proyectos.img = this.url
+        }
       }
 
     })
@@ -77,7 +76,7 @@ export class EditproyectoComponent implements OnInit {
 }
 
 
-  
+
 
 
 
